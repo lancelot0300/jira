@@ -1,0 +1,54 @@
+<article class="opened-card">
+    <section class="opened-card-left">
+        <section class="opened-card-title">
+            <div class="opened-card-title-top">
+                <img [src]="card.userPicture" alt="user picture" class="opened-card-user-picture" />
+                {{card.id}}
+            </div>
+            <h4>{{card.title}}</h4>
+        </section>
+        <section class="opened-card-description">
+            {{card.description}}
+        </section>
+        <section class="opened-card-footer">
+            <h4>Comments</h4>
+            <div class="opened-card-comment">
+                <input type="text" class="opened-card-comment-input" placeholder="Write a comment..." />
+            </div>
+            <div class="opened-card-comments">
+
+            </div>
+        </section>
+    </section> 
+    <section class="opened-card-right">
+        <div class="opened-card-close">
+            <i class="material-icons icon-close" (click)="closeCard()">close</i>
+        </div>
+        <label class="opened-card-select-wrapper">
+            <span class="opened-card-label">Status: </span>
+            <select 
+                class="opened-card-select" 
+                [value]="card.status"
+                (change)="handleChangeStatus($event)"
+            >
+                <option value="todo">To Do</option>
+                <option value="doing">Doing</option>
+                <option value="review">Review</option>
+                <option value="done">Done</option>
+            </select>
+        </label>
+        <label class="opened-card-select-wrapper">
+            <span class="opened-card-label">Priority: </span>
+            <select 
+                class="opened-card-select" 
+                [value]="card.priority"
+                (change)="handleChangePriority($event)"
+            >
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </label>
+    </section>
+    
+</article>

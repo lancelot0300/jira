@@ -1,0 +1,42 @@
+aside{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.menu-option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aside-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1D4ED8;
+}
+.aside-menu{
+    background-color: #F4F4F5;
+}
+
+.aside-logout{
+    color: white;
+    font-weight: bold;
+}

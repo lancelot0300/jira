@@ -1,0 +1,68 @@
+.card{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #A1A1AA;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 0 0 10px #A1A1AA;
+}
+
+.card-task{
+    background-color: #39bf8e;;    
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 100%;
+    font-weight: 600;
+    margin: 0;
+}
+.card-id{
+    color: #A1A1AA;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    gap: 5px;
+}
+
+.card-user-picture{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.card-footer-right{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-priority{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-priority-point-active, .card-priority-point-notactive{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.card-priority-point-active{
+    background-color: #0f6ab4;
+}
+.card-priority-point-notactive{
+    background-color: #A1A1AA;
+}

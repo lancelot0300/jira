@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --link: #187bcd;
+  --link-hover: #0f6ab4;
+  --button: #59acec;
+  --button-hover: #3b9ae7;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+input,select,p{
+  all: unset;
+}
+
+.input-with-icon{
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.input-with-icon > i{
+    position: absolute;
+    cursor: pointer;
+}

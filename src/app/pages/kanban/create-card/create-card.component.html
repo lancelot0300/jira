@@ -1,0 +1,32 @@
+<form class="created-card" (submit)="createCard()">
+    <section class="created-card-left">
+        <section class="created-card-title">
+            <input type="text" class="created-card-title-input" placeholder="Title" [(ngModel)]="title" name="title" required/>
+        </section>
+        <section class="created-card-description">
+            <textarea class="created-card-description-textarea" placeholder="Description" [(ngModel)]="description" name="description" required></textarea>
+        </section>
+        <button class="created-card-submit" type="submit">Submit</button>
+    </section> 
+    <section class="created-card-right">
+        <div class="created-card-close">
+            <i class="material-icons icon-close" (click)="closeCard()">close</i>
+        </div>
+        <label class="created-card-select-wrapper">
+            <span class="created-card-label">Status: </span>
+            <select class="created-card-select" [(ngModel)]="status" name="status">
+                <option value="todo">To Do</option>
+                <option value="doing">Doing</option>
+                <option value="review">Review</option>
+            </select>
+        </label>
+        <label class="created-card-select-wrapper">
+            <span class="created-card-label">Priority: </span>
+            <select class="created-card-select" [(ngModel)]="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </label>
+    </section>
+</form>

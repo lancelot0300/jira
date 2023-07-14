@@ -1,0 +1,65 @@
+<kanban-opened-card
+  class="kanban-card-opened"
+  *ngIf="openedCard"
+  [card]="openedCard"
+  (closeCardEvent)="handleCardClose($event)"
+  (cardState)="onCardStateChange($event)"
+></kanban-opened-card>
+<kanban-create-card
+  class="kanban-card-opened"
+  *ngIf="openedCardCreator"
+  [cardsLength]="cards.length"
+  (closeCardEvent)="handleCardCreatorClose()"
+  (createCardEvent)="handleCardCreate($event)"
+></kanban-create-card>
+<div class="kanban-wrapper">
+  <main class="kanban">
+    <section class="kanban-header">
+      <h1 class="kanban-name">Board</h1>
+      <div class="kanban-board-menu">
+        <div class=" input-with-icon">
+          <input type="text" class="kanban-input-search" placeholder="Search" />
+          <i class="material-icons">search</i>
+        </div>
+        <div class="kanban-select-filters input-with-icon">
+          <select>
+            <option default value="filter1">Filter1</option>
+            <option value="filter2">Filter2</option>
+            <option value="filter3">Filter3</option>
+          </select>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <i class="material-icons icon-plus" (click)="openCardCreator()">add</i>
+      </div>
+    </section>
+    <div class="kanban-columns">
+      <article class="kanban-column">
+        <h3>Todo: {{ todoCards.length }} </h3>
+        <kanban-card
+          class="kanban-card"
+          *ngFor="let card of todoCards"
+          [card]="card"
+          (cardState)="onCardStateChange($event)"
+        ></kanban-card>
+      </article>
+      <article class="kanban-column">
+        <h3>Doing: {{ doingCards.length }} </h3>
+        <kanban-card
+          class="kanban-card"
+          *ngFor="let card of doingCards"
+          [card]="card"
+          (cardState)="onCardStateChange($event)"
+        ></kanban-card>
+      </article>
+      <article class="kanban-column">
+        <h3>Review: {{ reviewCards.length }}</h3>
+        <kanban-card
+          class="kanban-card"
+          *ngFor="let card of reviewCards"
+          [card]="card"
+          (cardState)="onCardStateChange($event)"
+        ></kanban-card>
+      </article>
+    </div>
+  </main>
+</div>

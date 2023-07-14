@@ -1,0 +1,25 @@
+<section class="card" (click)="openCard()">
+    <p class="card-title">{{ card.title }}</p>
+    <p class="card-task">{{ card.task }}</p>
+    <div class="card-footer">
+        <div class="card-priority" *ngIf="card.priority==='low'">
+          <div class="card-priority-point-active"></div>
+          <div class="card-priority-point-notactive"></div>
+          <div class="card-priority-point-notactive"></div>
+        </div>
+        <div class="card-priority" *ngIf="card.priority==='medium'">
+          <div class="card-priority-point-active"></div>
+          <div class="card-priority-point-active"></div>
+          <div class="card-priority-point-notactive"></div>
+        </div>
+        <div class="card-priority" *ngIf="card.priority==='high'">
+          <div class="card-priority-point-active"></div>
+          <div class="card-priority-point-active"></div>
+          <div class="card-priority-point-active"></div>
+        </div>
+      <div class="card-footer-right">
+        <p class="card-id">{{ card.id }}</p>
+        <img [src]="card.userPicture" alt="user picture" class="card-user-picture" />
+      </div>
+    </div>
+  </section>

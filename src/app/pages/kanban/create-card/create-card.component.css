@@ -1,0 +1,226 @@
+.created-card {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: 85%;
+    z-index: 100;
+    min-height: 500px;
+  }
+  
+  .created-card::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F4F4F5;
+    border-radius: 10px;
+  }
+  
+  .created-card::-webkit-scrollbar-thumb {
+    background-color: #A1A1AA;
+    border-radius: 10px;
+  }
+  
+  .created-card-title {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: inset 0 0 5px #A1A1AA;
+    border-radius: 10px;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+  }
+  
+  .created-card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .icon-close {
+    font-size: 2rem;
+    color: #A1A1AA;
+    cursor: pointer;
+  }
+  
+  .icon-close:hover {
+    color: #c2122c;
+  }
+  
+  .created-card-close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+    position: absolute;
+    top: -40px;
+    right: 0;
+  }
+  
+  .created-card-user-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .created-card-title-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .created-card-title > h4 {
+    margin: 0;
+  }
+  
+  .created-card-title {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    height: 100px;
+  }
+  .created-card-title > input {
+    width: 100%;
+    height: 100px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: #A1A1AA;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: start;
+  }
+  
+  .created-card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    height: 100%;
+    box-shadow: inset 0 0 5px #A1A1AA;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+  }
+  
+  .created-card-description-textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    color: #A1A1AA;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .created-card-comment-input:focus {
+    box-shadow: 0 0 10px #A1A1AA;
+  }
+  
+  .created-card-comment-input::placeholder {
+    color: #A1A1AA;
+  }
+  
+  .created-card-select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 5px 10px;
+    width: 10rem;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #A1A1AA;
+  }
+  .created-card-select
+  {
+cursor: pointer;
+  }
+  
+  .created-card-select-wrapper > select {
+    width: 100%;
+  }
+  
+  .created-card-right {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 0 0 5px #A1A1AA;
+  }
+  
+  .created-card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+    background-color: #F4F4F5;
+    backdrop-filter: blur(100px);
+    opacity: 95%;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #A1A1AA;
+    width: 100%;
+  }
+  
+  .created-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .created-card-footer > h4 {
+    font-size: 1.2rem;
+  }
+.created-card-submit{
+    width: 25%;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #39bf8e;
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #A1A1AA;
+    transition: box-shadow 0.3s ease-in-out;
+}  
